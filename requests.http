@@ -1,4 +1,12 @@
 GET http://localhost:3000/stadiums.json
 
 ###
-GET http://localhost:3000/stadiums/4.json
+GET http://localhost:3000/stadiums/5.json
+
+###
+POST http://localhost:3000/stadiums.json
+Content-Type: application/json
+
+{
+   "name": "Lumen Field", "city": "Seattle", "address": "", "image": ""
+}
