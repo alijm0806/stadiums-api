@@ -1,0 +1,4 @@
+GET http://localhost:3000/stadiums.json
+
+###
+GET http://localhost:3000/stadiums/4.json
