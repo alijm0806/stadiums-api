@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get "/stadiums" => "stadiums#index"
   get "/stadiums/:id" => "stadiums#show"
   post "/stadiums" => "stadiums#create"
+  patch "/stadiums/:id" => "stadiums#update"
+  delete "/stadiums/:id" => "stadiums#destroy"
 end

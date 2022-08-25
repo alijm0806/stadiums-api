@@ -19,4 +19,21 @@ class StadiumsController < ApplicationController
     stadium.save
     render json: stadium.as_json
   end
+
+  def update
+    stadium = Stadium.find_by(id: params[:id])
+    stadium.name = params[:name] || stadium.name
+    stadium.city = params[:city] || stadium.city
+    stadium.address = params[:address] || stadium.address
+    stadium.image = params[:image] || stadium.image
+    stadium.save
+
+    render json: stadium.as_json
+  end
+
+  def destroy
+    stadium = Stadium.find_by(id: params[:id])
+    stadium.destroy
+    render json: { message: "stadium has been removed" }
+  end
 end
