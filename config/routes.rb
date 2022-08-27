@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   post "/stadiums" => "stadiums#create"
   patch "/stadiums/:id" => "stadiums#update"
   delete "/stadiums/:id" => "stadiums#destroy"
+
+  ###
+  post "/users" => "users#create"
 end
