@@ -1,4 +1,6 @@
 class StadiumsController < ApplicationController
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
+
   def index
     stadiums = Stadium.all
     render json: stadiums.as_json
@@ -10,14 +12,17 @@ class StadiumsController < ApplicationController
   end
 
   def create
-    stadium = Stadium.new(
-      name: params[:name],
-      city: params[:city],
-      address: params[:address],
-      image: params[:image],
-    )
-    stadium.save
-    render json: stadium.as_json
+    if current_user
+      stadium = Stadium.new(
+        name: params[:name],
+        city: params[:city],
+        address: params[:address],
+        image: params[:image],
+      )
+      stadium.save
+
+      render json: stadium.as_json
+    end
   end
 
   def update

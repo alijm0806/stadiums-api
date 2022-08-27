@@ -6,10 +6,11 @@ GET http://localhost:3000/stadiums/8.json
 
 ### STADIUMS CREATE
 POST http://localhost:3000/stadiums.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjE3MTU5Mzl9.LsWXFoegucW4u5q0vQ3XkYM452u4o-56yxDMrugHVpg
 Content-Type: application/json
 
 {
-   "name": "Lumen Field", "city": "Seattle", "address": "", "image": ""
+   "name": "Gillette Stadium", "city": "Foxborough", "address": "1 Patriot Pl, Foxborough, MA 02035", "image": "https://assets2.cbsnewsstatic.com/hub/i/r/2019/07/10/d09559ef-c1f3-482a-84c2-57e21db7be0f/thumbnail/1200x630/92723d760c8738d335e37d2fb34ba27d/gilette.jpg"
 }
 
 
@@ -22,7 +23,7 @@ Content-Type: application/json
 }
 
 ### STADIUMS DELETE
-DELETE http://localhost:3000/stadiums/18.json
+DELETE http://localhost:3000/stadiums/21.json
 
 
 
