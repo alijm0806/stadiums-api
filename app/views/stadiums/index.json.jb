@@ -1,0 +1,9 @@
+@stadiums.map do |stadium|
+  {
+    id: stadium.id,
+    name: stadium.name,
+    city: stadium.city,
+    address: stadium.address,
+    image: stadium.image,
+  }
+end

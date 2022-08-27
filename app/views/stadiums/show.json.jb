@@ -1,0 +1,9 @@
+{
+  id: @stadium.id,
+  name: @stadium.name,
+  city: @stadium.city,
+  address: @stadium.address,
+  image: @stadium.image,
+  created_at: @stadium.created_at,
+  updated_at: @stadium.updated_at,
+}

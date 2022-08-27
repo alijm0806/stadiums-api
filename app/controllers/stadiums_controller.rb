@@ -2,13 +2,13 @@ class StadiumsController < ApplicationController
   before_action :authenticate_admin, only: [:create, :update, :destroy]
 
   def index
-    stadiums = Stadium.all
-    render json: stadiums.as_json
+    @stadiums = Stadium.all
+    render template: "stadiums/index"
   end
 
   def show
-    stadium = Stadium.find_by(id: params[:id])
-    render json: stadium.as_json
+    @stadium = Stadium.find_by(id: params[:id])
+    render template: "stadiums/show"
   end
 
   def create
