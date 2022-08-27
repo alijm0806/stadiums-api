@@ -1,9 +1,10 @@
+### STADIUMS INDEX
 GET http://localhost:3000/stadiums.json
 
-###
+### STADIUMS SHOW
 GET http://localhost:3000/stadiums/8.json
 
-###
+### STADIUMS CREATE
 POST http://localhost:3000/stadiums.json
 Content-Type: application/json
 
@@ -12,7 +13,7 @@ Content-Type: application/json
 }
 
 
-###
+### STADIUMS UPDATE
 PATCH http://localhost:3000/stadiums/8.json
 Content-Type: application/json
 
@@ -20,8 +21,10 @@ Content-Type: application/json
    "image": "https://frontofficesports.com/wp-content/uploads/2022/01/FOS-Saturday-SoFi-Stadium-2.jpg"
 }
 
-###
+### STADIUMS DELETE
 DELETE http://localhost:3000/stadiums/18.json
+
+
 
 
 ### Users create (signup)
