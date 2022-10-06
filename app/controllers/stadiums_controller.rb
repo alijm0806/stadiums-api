@@ -2,8 +2,17 @@ class StadiumsController < ApplicationController
   before_action :authenticate_admin, only: [:create, :update, :destroy]
 
   def index
-    @stadiums = Stadium.all
-    render template: "stadiums/index"
+    stadiums = Stadium.all
+    # render template: "stadiums/index"
+    stadiums_coordinates = []
+    stadiums.each do |stadium|
+      stadiums_coordinates << { type: "Feature", properties: { id: stadium.id, image: stadium.image, 'icon': "stadium-15" }, geometry: { type: "Point", coordinates: [stadium.lat, stadium.lon, 0.0] } }
+    end
+    render json: {
+             type: "FeatureCollection",
+             crs: { type: "name", properties: { name: "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+             features: stadiums_coordinates,
+           }
   end
 
   def show

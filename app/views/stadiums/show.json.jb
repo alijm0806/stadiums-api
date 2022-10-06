@@ -4,6 +4,9 @@
   city: @stadium.city,
   address: @stadium.address,
   image: @stadium.image,
+  lat: @stadium.lat,
+  lon: @stadium.lon,
+  coordinates: [@stadium.lat, @stadium.lon],
   created_at: @stadium.created_at,
   updated_at: @stadium.updated_at,
 }
