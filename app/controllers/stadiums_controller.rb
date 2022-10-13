@@ -6,7 +6,7 @@ class StadiumsController < ApplicationController
     # render template: "stadiums/index"
     stadiums_coordinates = []
     stadiums.each do |stadium|
-      stadiums_coordinates << { type: "Feature", properties: { id: stadium.id, image: stadium.image, 'icon': "stadium-15" }, geometry: { type: "Point", coordinates: [stadium.lat, stadium.lon, 0.0] } }
+      stadiums_coordinates << { type: "Feature", properties: { id: stadium.id, name: stadium.name, image: stadium.image, 'icon': "stadium-15" }, geometry: { type: "Point", coordinates: [stadium.lat, stadium.lon, 0.0] } }
     end
     render json: {
              type: "FeatureCollection",
