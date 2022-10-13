@@ -5,27 +5,105 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-stadium = Stadium.new(
-  name: "MetLife Stadium", city: "NJ", address: "", image: "",
-)
-stadium.save
 
-stadium = Stadium.new(
-  name: "Mercedes-Benz Stadium", city: "Atlanta", address: "", image: "",
+Stadium.create!(
+  [{ name: "MetLife Stadium",
+     city: "New Jersey",
+     address: "1 MetLife Stadium Dr, East Rutherford, NJ 07073",
+     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Metlife_stadium_%28Aerial_view%29.jpg/250px-Metlife_stadium_%28Aerial_view%29.jpg",
+     lat: -74.0745,
+     lon: 40.8135,
+     video_url: "https://www.youtube.com/embed/lihd-uM2Muc",
+     capacity: 82500,
+     built_year: 2007 },
+   { name: "Mercedes-Benz Stadium",
+     city: "Atlanta",
+     address: "54 Peachtree St NW, Atlanta, GA 30303",
+     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Mercedes_Benz_Stadium_time_lapse_capture_2017-08-13.jpg/1200px-Mercedes_Benz_Stadium_time_lapse_capture_2017-08-13.jpg",
+     lat: -84.3839,
+     lon: 33.7552,
+     video_url: "https://www.youtube.com/embed/26kWnXFWqRU",
+     capacity: 75000,
+     built_year: 2014 },
+   { name: "NRG Stadium",
+     city: "Houston",
+     address: "NRG Pkwy, Houston, TX 77054",
+     image: "https://www.nrgpark.com/wp-content/uploads/poster-nrg-facilities.jpg",
+     lat: -95.4107,
+     lon: 29.6847,
+     video_url: "https://www.youtube.com/embed/8mfckSVMtzs",
+     capacity: 72220,
+     built_year: 2002 },
+   { name: "Hard Rock Stadium",
+     city: "Miami",
+     address: " 347 Don Shula Dr, Miami Gardens, FL 33056",
+     image: "https://dolphinstalk.com/wp-content/uploads/2022/01/HardRock15.jpg",
+     lat: -80.2389,
+     lon: 25.958,
+     video_url: "https://www.youtube.com/embed/PmQWIKd5pgQ",
+     capacity: 65326,
+     built_year: 1987 },
+   { name: "AT&T Stadium",
+     city: "Arlington",
+     address: "1 AT&T Way, Arlington, TX 76011",
+     image: "https://www.hksinc.com/wp-content/uploads/2018/10/ATT_Stadium_02.jpg",
+     lat: -97.0945,
+     lon: 32.7473,
+     video_url: "https://www.youtube.com/embed/scyBNQ-Gra0",
+     capacity: 80000,
+     built_year: 2009 },
+   { name: "Lincoln Financial Field",
+     city: "Philadelphia",
+     address: "One Lincoln Financial Field Way, Philadelphia, PA 19148",
+     image: "http://www.lfg.com/ss/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1429034910090&ssbinary=true",
+     lat: -75.1675,
+     lon: 39.9014,
+     video_url: "https://www.youtube.com/embed/ZdMiWgxCRoA",
+     capacity: 67594,
+     built_year: 2001 },
+   { name: "Lumen Field",
+     city: "Seattle",
+     address: "800 Occidental Ave S, Seattle, WA 98134",
+     image: "https://assets-global.website-files.com/609445b9eb43c95f4a0b0e7b/614377a3561cd7fb26a377ca_lumen-field-aerial.jpg",
+     lat: -122.3316,
+     lon: 47.5952,
+     video_url: "https://www.youtube.com/embed/uNpodp0dlU0",
+     capacity: 72000,
+     built_year: 2002 },
+   { name: "SoFi Stadium",
+     city: "Inglewood",
+     address: "1001 Stadium Dr, Inglewood, CA 90301",
+     image: "https://frontofficesports.com/wp-content/uploads/2022/01/FOS-Saturday-SoFi-Stadium-2.jpg",
+     lat: -118.339,
+     lon: 33.9535,
+     video_url: "https://www.youtube.com/embed/jfJILuSZFIY",
+     capacity: 70000,
+     built_year: 2020 },
+   { name: "Levi Stadium",
+     city: "Santa Clara",
+     address: "4900 Marie P DeBartolo Way, Santa Clara, CA 95054",
+     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/160201-H-NI589-1353_%2824398261729%29.jpg/1200px-160201-H-NI589-1353_%2824398261729%29.jpg",
+     lat: -121.9694,
+     lon: 37.4033,
+     video_url: "https://www.youtube.com/embed/1S5KVr8Vz44",
+     capacity: 68500,
+     built_year: 2014 },
+   { name: "Arrowhead Stadium",
+     city: "Kansas City",
+     address: "1 Arrowhead Dr, Kansas City, MO 64129",
+     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Aerial_view_of_Arrowhead_Stadium_08-31-2013.jpg/280px-Aerial_view_of_Arrowhead_Stadium_08-31-2013.jpg",
+     lat: -94.4839,
+     lon: 39.0489,
+     video_url: "https://www.youtube.com/embed/lolUiErWEco",
+     capacity: 76416,
+     built_year: 1972 },
+   { name: "Gillette Stadium",
+     city: "Foxborough",
+     address: "1 Patriot Pl, Foxborough, MA 02035",
+     image: "https://assets2.cbsnewsstatic.com/hub/i/r/2019/07/10/d09559ef-c1f3-482a-84c2-57e21db7be0f/thumbnail/1200x630/92723d760c8738d335e37d2fb34ba27d/gilette.jpg",
+     lat: -71.2643,
+     lon: 42.0909,
+     video_url: "https://www.youtube.com/embed/Gu2gTj8Q9S0",
+     capacity: 65878,
+     built_year: 2000 }]
 )
-stadium.save
-
-stadium = Stadium.new(
-  name: "NRG Stadium", city: "Houston", address: "", image: "",
-)
-stadium.save
-
-stadium = Stadium.new(
-  name: "Hard Rock Stadium", city: "Miami", address: "", image: "",
-)
-stadium.save
-
-stadium = Stadium.new(
-  name: "Lincoln Financial Field", city: "Philadelphia", address: "", image: "",
-)
-stadium.save
